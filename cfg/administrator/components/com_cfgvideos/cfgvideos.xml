@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.5" method="upgrade">
+    <identifier>com:cfgvideos</identifier>
+    <name>COM_CFGVIDEOS</name>
+    <author>Cameron Barr</author>
+    <creationDate>January 2017</creationDate>
+    <copyright>Copyright (C) 2016, Cameron Barr, Magnetic Merchandising. All rights reserved.</copyright>
+    <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+    <authorEmail>cbarr@magneticmerchandising.com</authorEmail>
+    <authorUrl>magneticmerchandising.com</authorUrl>
+    <version>1.0</version>
+    <description>COM_CFGVIDEOS_XML_DESCRIPTION</description>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">resources/install/install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">resources/install/uninstall.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="../../../site/components/com_cfgvideos">
+        <folder>controller</folder>
+        <folder>dispatcher</folder>
+        <folder>views</folder>
+        <folder>resources</folder>
+        
+        <filename>cfgvideos.php</filename>
+    </files>
+
+    <administration>
+        <menu view="videos" link="option=com_cfgvideos&amp;view=videos">COM_CFGVIDEOS</menu>
+        <submenu>
+            <menu view="videos" link="option=com_cfgvideos&amp;view=videos">COM_CFGVIDEOS_SUBMENU_VIDEOS</menu>
+            <menu view="tags" link="option=com_cfgvideos&amp;view=tags">COM_CFGVIDEOS_SUBMENU_TAGS</menu>
+        </submenu>
+
+        <files folder="../../../administrator/components/com_cfgvideos">
+            <folder>controller</folder>
+            <folder>database</folder>
+            <folder>dispatcher</folder>
+            <folder>language</folder>
+            <folder>model</folder>
+            <folder>views</folder>
+            <folder>resources</folder>
+
+            <filename>access.xml</filename>
+            <filename>cfgvideos.php</filename>
+            <filename>version.php</filename>
+        </files>
+    </administration>
+
+</extension>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="plugin" group="k2" method="upgrade">
+    <name>plg_k2_cfgvideos</name>
+    <author>Cameron Barr</author>
+    <creationDate>December 2016</creationDate>
+    <copyright>Copyright (C) 2016, Cameron Barr, Magnetic Merchandising. All rights reserved.</copyright>
+    <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+    <authorEmail>cbarr@magneticmerchandising.com</authorEmail>
+    <authorUrl>magneticmerchandising.com/</authorUrl>
+    <version>1.0</version>
+    <description>Relate videos to K2 Items</description>
+
+    <!-- Joomla! plugin parameters -->
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+            </fieldset>
+        </fields>
+    </config>
+    <!-- K2 backend field parameters -->
+    <fields group="item-video">
+
+    </fields>
+    <fields group="item-other">
+        <field
+                id="videos"
+                name="videos"
+                type="sql"
+                label="Add Videos"
+                key_field="value"
+                value_field="title"
+                default=""
+                multiple="1"
+                description=" "
+                query="select id as value, concat_ws(' - ', id, title) as title from #__cfgvideos_videos"
+                class="inputbox">
+        </field>
+    </fields>
+    <files>
+        <filename plugin="cfgvideos">cfgvideos.php</filename>
+    </files>
+    <languages>
+    </languages>
+</extension>

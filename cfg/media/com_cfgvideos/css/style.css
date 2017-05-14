@@ -1,0 +1,22 @@
+.com_cfgvideos .span4:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+.cfgvideos_video img {
+    min-height: 168px;
+}
+
+/* CFGV Tags */
+.cfgv--tags .cfgv--tag {
+    display: inline-block;
+    margin: 5px;
+}
+
+.cfgv--tags .cfgv--tag .cfgv--tag__link {
+    text-decoration: none;
+}
+
+.cfgv--tags .cfgv--tag .cfgv--tag__link--title {
+    display: block;
+}
+/* End of CFGV Tags */
